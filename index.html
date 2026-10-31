@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/harness-engineering/logo.svg" />
+    <link rel="canonical" href="https://yuxinrun.github.io/harness-engineering/" />
+    <meta name="theme-color" content="#f6f7fc" />
+    <meta name="author" content="鱼心 · Yuxin" />
+    <title>缰绳工程实战指南 · Harness Engineering</title>
+    <meta
+      name="description"
+      content="从和 AI 聊天到给 AI 造缰绳：系统掌握 Harness Engineering（缰绳工程）的五层架构、大厂实战案例、可复制模板与交互实验室。中英双语，写给转型中的程序员与进阶中的 Agent 工程师。"
+    />
+    <meta
+      name="keywords"
+      content="Harness Engineering, 缰绳工程, AI Agent, Claude Code, AGENTS.md, CLAUDE.md, Hooks, 上下文工程, Agent 工程, 鱼心快跑"
+    />
+    <meta property="og:title" content="缰绳工程实战指南 · Harness Engineering" />
+    <meta
+      property="og:description"
+      content="模型是大脑，Harness 是手脚、边界和运行环境。18 章系统指南 + 5 大模式 + 交互实验室 + 发布门禁。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:url" content="https://yuxinrun.github.io/harness-engineering/" />
+    <meta property="og:site_name" content="鱼心快跑 · Yuxin Runs" />
+    <meta property="og:image" content="https://yuxinrun.github.io/harness-engineering/logo.svg" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="缰绳工程实战指南 · Harness Engineering" />
+    <meta name="twitter:description" content="从和 AI 聊天到给 AI 造缰绳。系统化 Harness Engineering 实战指南。" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('he-theme');
+          var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = saved || (dark ? 'dark' : 'light');
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.classList.toggle('dark', theme === 'dark');
+        } catch (e) {}
+        try {
+          var lang = localStorage.getItem('he-lang');
+          if (lang === 'en') document.documentElement.lang = 'en';
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
