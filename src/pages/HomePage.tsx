@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, BookOpen, Github, Sparkles, Zap } from 'lucide-react';
+import { ArrowRight, BookOpen, Sparkles, Zap } from 'lucide-react';
 import { Logo } from '../components/Logo';
 import { Icon } from '../components/Icon';
 import { InclusionDiagram } from '../components/charts/Diagrams';
@@ -144,14 +144,6 @@ export function HomePage() {
               <Zap size={15} />
               {t('openLab')}
             </Link>
-            <a
-              href={SRC.githubRepo.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl border border-line bg-surface/60 px-4 py-3 text-sm text-muted transition hover:border-brand/40 hover:text-brand"
-            >
-              <Github size={15} /> GitHub
-            </a>
           </div>
 
           <div className="mt-8 flex flex-wrap gap-x-5 gap-y-2 font-mono text-[0.68rem] uppercase tracking-[0.12em] text-faint">

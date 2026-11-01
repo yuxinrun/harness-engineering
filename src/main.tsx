@@ -5,6 +5,7 @@ import { App } from './App';
 import { LangProvider } from './lib/i18n';
 import { ThemeProvider } from './lib/theme';
 import { OutlineProvider } from './components/layout/OutlineContext';
+import { TtsProvider } from './lib/TtsContext';
 import './index.css';
 
 createRoot(document.getElementById('root')!).render(
@@ -12,9 +13,11 @@ createRoot(document.getElementById('root')!).render(
     <ThemeProvider>
       <LangProvider>
         <HashRouter>
-          <OutlineProvider>
-            <App />
-          </OutlineProvider>
+          <TtsProvider>
+            <OutlineProvider>
+              <App />
+            </OutlineProvider>
+          </TtsProvider>
         </HashRouter>
       </LangProvider>
     </ThemeProvider>

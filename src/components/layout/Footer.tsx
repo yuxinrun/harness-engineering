@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowUpRight, Github } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import clsx from 'clsx';
 import { Logo } from '../Logo';
 import { useLang } from '../../lib/i18n';
@@ -124,16 +124,6 @@ export function Footer() {
                   className="inline-flex items-center gap-1 text-muted hover:text-brand"
                 >
                   Anthropic · Harness design <ArrowUpRight size={10} />
-                </a>
-              </li>
-              <li>
-                <a
-                  href={SRC.githubRepo.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-muted hover:text-brand"
-                >
-                  <Github size={11} /> {t('github')}
                 </a>
               </li>
             </ul>

@@ -97,8 +97,4 @@ export const SRC = {
     label: { zh: '鱼心快跑 · better-agent', en: 'Yuxin Runs · better-agent' },
     href: 'https://yuxinrun.github.io/better-agent/',
   },
-  githubRepo: {
-    label: { zh: '本站 GitHub 仓库', en: 'This site on GitHub' },
-    href: 'https://github.com/yuxinrun/harness-engineering',
-  },
 } satisfies Record<string, SourceRef>;

@@ -28,7 +28,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     root.dataset.theme = theme;
     root.classList.toggle('dark', theme === 'dark');
     const meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.setAttribute('content', theme === 'dark' ? '#090c16' : '#f6f7fc');
+    if (meta) meta.setAttribute('content', theme === 'dark' ? '#090c16' : '#f6f0e2');
   }, [theme]);
 
   useEffect(() => {

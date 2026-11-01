@@ -1,4 +1,4 @@
-import { ArrowUpRight, ExternalLink, Feather, Github } from 'lucide-react';
+import { ArrowUpRight, ExternalLink, Feather } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Logo } from '../components/Logo';
 import { Icon } from '../components/Icon';
@@ -255,14 +255,6 @@ export function AboutPage() {
           )}
         </div>
         <div className="mt-4 flex flex-wrap items-center gap-2">
-          <a
-            href={SRC.githubRepo.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 rounded-lg border border-line bg-surface px-3 py-1.5 text-[0.75rem] text-muted transition hover:border-brand/35 hover:text-ink"
-          >
-            <Github size={13} /> {t('github')}
-          </a>
           <Link
             to="/chapter/ch01"
             className="inline-flex items-center gap-1.5 rounded-lg border border-brand/35 bg-brand/[0.07] px-3 py-1.5 text-[0.75rem] font-medium text-brand transition hover:bg-brand/10"

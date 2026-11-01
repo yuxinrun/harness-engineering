@@ -15,7 +15,6 @@ export const ui = {
   themeLabel: { zh: '切换主题', en: 'Toggle theme' },
   themeLight: { zh: '日间模式', en: 'Light mode' },
   themeDark: { zh: '夜间模式', en: 'Dark mode' },
-  github: { zh: 'GitHub 仓库', en: 'GitHub repository' },
   menu: { zh: '打开目录', en: 'Open contents' },
   close: { zh: '关闭', en: 'Close' },
   toc: { zh: '章节目录', en: 'Contents' },

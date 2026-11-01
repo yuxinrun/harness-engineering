@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight, Check, CheckCircle2, Circle, Clock, ExternalLink
 import clsx from 'clsx';
 import { BlockRenderer } from '../components/BlockRenderer';
 import { Logo } from '../components/Logo';
+import { ListenButton } from '../components/ListenButton';
 import { useLang, usePick } from '../lib/i18n';
 import { useReadChapters } from '../lib/hooks';
 import { useSetOutline } from '../components/layout/OutlineContext';
@@ -44,7 +45,7 @@ export function ChapterPage() {
   const partIndex = partProgress.findIndex((chapter) => chapter.id === meta.id) + 1;
 
   return (
-    <article className="mx-auto max-w-reading px-5 py-10 sm:px-8 lg:py-14">
+    <article id={`tts-${meta.id}`} className="mx-auto max-w-reading px-5 py-10 sm:px-8 lg:py-14">
       <nav className="mb-7 flex flex-wrap items-center gap-1.5 text-[0.72rem] text-faint" aria-label="Breadcrumb">
         <Link to="/" className="hover:text-brand">
           {t('home')}
@@ -81,12 +82,13 @@ export function ChapterPage() {
               {pick(tag)}
             </span>
           ))}
+          <ListenButton chapterId={meta.id} />
           <button
             type="button"
             onClick={() => toggle(meta.id)}
             aria-pressed={isRead}
             className={clsx(
-              'ml-auto inline-flex items-center gap-1.5 rounded-full border px-3 py-1 font-medium transition',
+              'inline-flex items-center gap-1.5 rounded-full border px-3 py-1 font-medium transition',
               isRead
                 ? 'border-success/40 bg-success/10 text-success'
                 : 'border-line bg-surface/60 text-muted hover:border-brand/40 hover:text-brand',
@@ -116,7 +118,7 @@ export function ChapterPage() {
       </div>
 
       {content?.sources && content.sources.length > 0 && (
-        <section className="mt-12 rounded-2xl border border-line bg-surface/50 p-4 sm:p-5">
+        <section data-no-speak className="mt-12 rounded-2xl border border-line bg-surface/50 p-4 sm:p-5">
           <h2 className="mb-3 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-faint">
             {t('sources')}
           </h2>

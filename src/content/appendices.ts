@@ -261,7 +261,7 @@ jobs:
       },
       {
         type: 'sources',
-        items: [SRC.anthropicHooks, SRC.anthropicBestPractices, SRC.agentsMd, SRC.githubRepo],
+        items: [SRC.anthropicHooks, SRC.anthropicBestPractices, SRC.agentsMd],
       },
     ],
   },
