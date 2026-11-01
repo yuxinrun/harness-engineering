@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, BookOpen, Sparkles, Zap } from 'lucide-react';
 import { Logo } from '../components/Logo';
 import { Icon } from '../components/Icon';
+import { HeroVisual } from '../components/HeroVisual';
 import { InclusionDiagram } from '../components/charts/Diagrams';
 import { chapters, parts, siblings, siblingUrl } from '../content/meta';
 import { featureNav } from '../content/nav';
@@ -107,7 +108,8 @@ export function HomePage() {
         <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-brand/10 blur-3xl" aria-hidden="true" />
         <div className="pointer-events-none absolute -bottom-28 left-1/3 h-72 w-72 rounded-full bg-accent/10 blur-3xl" aria-hidden="true" />
 
-        <div className="relative">
+        <div className="relative grid gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
+          <div className="min-w-0">
           <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-brand/25 bg-brand/[0.07] px-3 py-1 text-[0.68rem] font-medium text-brand">
             <Sparkles size={12} />
             {lang === 'en' ? 'Harness Engineering · the 2026 shift' : '缰绳工程 · 2026 年的工程重心转移'}
@@ -145,8 +147,13 @@ export function HomePage() {
               {t('openLab')}
             </Link>
           </div>
+          </div>
 
-          <div className="mt-8 flex flex-wrap gap-x-5 gap-y-2 font-mono text-[0.68rem] uppercase tracking-[0.12em] text-faint">
+          <div className="hidden items-center justify-center lg:flex">
+            <HeroVisual />
+          </div>
+
+          <div className="mt-2 flex flex-wrap gap-x-5 gap-y-2 font-mono text-[0.68rem] uppercase tracking-[0.12em] text-faint lg:col-span-2">
             <span>18 chapters</span>
             <span>6 parts</span>
             <span>5 patterns</span>
